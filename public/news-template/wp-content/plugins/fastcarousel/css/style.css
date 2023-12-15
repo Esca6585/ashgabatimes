@@ -1629,3 +1629,7 @@ Author: Ad-theme.com
 .fc_nav_style8.owl-theme .owl-dots .owl-dot span {
     border-radius: 0;
 }
+
+.bg-black {
+    background-color: #000;
+}

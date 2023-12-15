@@ -12,8 +12,9 @@
         @endif
     "
     >
-        <a href="{{ route('single-page', $itemHeader->id ) }}"><img src="{{ asset($itemHeader->image) }}"
-                alt="{{ asset($itemHeader->image) }}"></a>
+        <a href="{{ route('single-page', $itemHeader->id ) }}">
+            <img src="{{ asset($itemHeader->image) }}" alt="{{ asset($itemHeader->image) }}">
+        </a>
 
                 <div class="article-info">
             <div class="article-info-top">

@@ -77,16 +77,16 @@
 
             <div class="flownews-wrap-container">
 
-                <div class="flownews-logo flownews-logo-left col-sm-3">
-                    <a href="{{ route('main-page') }}"><img
-                            src="{{ asset('news-template/wp-content/uploads/2017/02/logo.png') }}" alt="Logo"></a>
+                <div class="flownews-logo flownews-logo-left col-sm-3 bg-black">
+                    <a href="{{ route('main-page') }}">
+                        <img src="{{ asset('assets/logo/agtimes-logo.png') }}" alt="Logo {{ asset('assets/logo/agtimes-logo.png') }}"></a>
                 </div>
 
                 <div class="flownews-banner-top flownews-banner-top-right col-sm-9">
                     <div class="flownews_advertisement_top_banner">
                         <a href="{{ route('main-page') }}">
-                            <img src="{{ asset('news-template/wp-content/uploads/2017/02/banner-flow.png') }}"
-                                alt="{{ asset('news-template/wp-content/uploads/2017/02/banner-flow.png') }}">
+                            <img src="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}"
+                                alt="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}">
                         </a>
                     </div>
                 </div>
@@ -177,9 +177,11 @@
     <div class="flownews-header-sticky">
         <div class="flownews-header-bottom flownews-wrap-container">
 
-            <div class="flownews-logo flownews-logo-right col-sm-2">
-                <a href="{{ route('main-page') }}"><img
-                        src="{{ asset('news-template/wp-content/uploads/2017/02/LOGO-white.png') }}" alt="Logo"></a>
+            <div class="flownews-logo col-sm-2">
+                <a href="{{ route('main-page') }}">
+                    <img src="{{ asset('assets/logo/agtimes-logo.png') }}" alt="Logo {{ asset('assets/logo/agtimes-logo.png') }}">
+                </a>
+
             </div>
             <div class="flownews-menu col-sm-10">
 
