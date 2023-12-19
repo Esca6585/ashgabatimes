@@ -79,12 +79,12 @@
 
                 <div class="flownews-logo flownews-logo-left col-sm-3 bg-black">
                     <a href="{{ route('main-page') }}">
-                        <img src="{{ asset('assets/logo/agtimes-logo.png') }}" alt="Logo {{ asset('assets/logo/agtimes-logo.png') }}"></a>
+                        <img src="{{ asset('assets/logo/ashgabattimes-logo.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo.png') }}"></a>
                 </div>
 
                 <div class="flownews-banner-top flownews-banner-top-right col-sm-9">
                     <div class="flownews_advertisement_top_banner">
-                        <a href="{{ route('main-page') }}">
+                        <a href="https://www.yupekyoly.com" target="_blank">
                             <img src="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}"
                                 alt="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}">
                         </a>
@@ -179,7 +179,7 @@
 
             <div class="flownews-logo col-sm-2">
                 <a href="{{ route('main-page') }}">
-                    <img src="{{ asset('assets/logo/agtimes-logo.png') }}" alt="Logo {{ asset('assets/logo/agtimes-logo.png') }}">
+                    <img src="{{ asset('assets/logo/ashgabattimes-logo.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo.png') }}">
                 </a>
 
             </div>
