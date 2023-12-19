@@ -5,7 +5,7 @@
 @endsection
 
 @section('container-content')
-    @include('front-end.container-content2')
+    @include('front-end.container-content-2')
 @endsection
 
 @section('footer')

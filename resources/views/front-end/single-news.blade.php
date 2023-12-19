@@ -24,7 +24,7 @@
                                 "
                         onclick="addToFavorite({{ $news->id }})">
                         <button class="favorite fa fa-heart"></button>
-                        <span class="favorite-txt">Избранный</span>
+                        <span class="favorite-txt">{{ __('Favorite') }}</span>
                     </div>
                     <!--- Favorite --->
                     <div class="article-separator">|</div>
@@ -83,7 +83,7 @@
                                                 "
                                         onclick="addToFavorite({{ $news->id }})">
                                         <button class="favorite fa fa-heart"></button>
-                                        <span class="favorite-txt">Избранный</span>
+                                        <span class="favorite-txt">{{ __('Favorite') }}</span>
                                     </span>
                                     <!--- Favorite --->
 

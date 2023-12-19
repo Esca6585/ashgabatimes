@@ -1,8 +1,5 @@
 <div class="flownews-container-content">
 
-
-
-
     <!-- start:sidebar left -->
     <div class="flownews-content col-xs-12 flownews-page">
         <!-- start:page content -->
@@ -78,7 +75,7 @@
                                     <div
                                         class="flownews-vc-element-posts  flownews-posts-type5 flownews-vc-posts-1-col flownews-vc-element-posts-6 element-no-padding">
                                         <div class="flownews-vc-element-posts-title-box title-box-6">
-                                            <h2>{{ $category_name ?? 'Избранный' }}</h2>
+                                            <h2>{{ $category_name ?? __('Favorite') }}</h2> 
                                         </div>
                                         <div class="flownews-vc-element-posts-article-container">
                                             @foreach($news as $row)
@@ -86,13 +83,13 @@
                                                 class="item-posts first-element-posts col-xs-12  vc-element-post-odd">
                                                 <div class="article-image col-xs-5">
                                                     <a href="{{ route('single-page', $row->id ) }}">
-                                                        <img class="flownews-vc-thumbs" src="{{ $row->image }}" alt="{{ $row->image }}">
+                                                        <img class="flownews-vc-thumbs" src="{{ asset($row->image) }}" alt="{{ asset($row->image) }}">
                                                     </a>
                                                 </div>
                                                 <div class="article-info col-xs-7">
                                                     <div class="article-info-top">
-                                                        <h3 class="article-title"><a
-                                                                href="{{ route('single-page', $row->id ) }}">{{ $row->title }}</a>
+                                                        <h3 class="article-title">
+                                                            <a href="{{ route('single-page', $row->id ) }}">{{ $row->title }}</a>
                                                         </h3>
                                                         <div class="article-data">
                                                             <i class="fa fa-calendar-o"></i>{{ $now->diffForHumans($row->updated_at) }}
@@ -110,11 +107,11 @@
                                                                     "
                                                             onclick="addToFavorite({{ $row->id }})">
                                                             <button class="favorite fa fa-heart"></button>
-                                                            <span class="favorite-txt">Избранный</span>
+                                                            <span class="favorite-txt">{{ __('Favorite') }}</span>
                                                         </div>
 
                                                         <div class="flownews-clear"></div>
-                                                        <p class="article-excerpt">{{ Str::limit($row->body, 200) }}<a
+                                                        <p class="article-excerpt">{!! Str::limit($row->body, 500) !!}<a
                                                                 class="article-read-more" href="{{ route('single-page', $row->id ) }}">
                                                                 <i class="fa fa-angle-double-right"></i></a>
                                                         </p>

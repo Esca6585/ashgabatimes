@@ -18,8 +18,9 @@
 
                 <div class="article-info">
             <div class="article-info-top">
-                <h2 class="article-title"><a
-                        href="{{ route('single-page', $itemHeader->id ) }}">{{ $itemHeader->title }}</a></h2>
+                <h2 class="article-title">
+                    <a href="{{ route('single-page', $itemHeader->id ) }}">{{ $itemHeader->title }}</a>
+                </h2>
                 <div class="article-category"><a href="{{ route('category-page', [ $itemHeader->category_id, $itemHeader->category->name ]) }}"
                             title="{{ $itemHeader->category->name }}">{{ $itemHeader->category->name }}</a></div>
                 <div class="flownews-clear"></div>

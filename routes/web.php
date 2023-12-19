@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\FrontControllers\FrontController::class, 'index'])->name('main-page');
 
-Route::get('/news/{news}', [App\Http\Controllers\FrontControllers\FrontController::class, 'singlePage'])->name('single-page');
+Route::get('/news/{news_id}', [App\Http\Controllers\FrontControllers\FrontController::class, 'singlePage'])->name('single-page');
 
 Route::get('/addToFavorite/{id}', [App\Http\Controllers\FrontControllers\FrontController::class, 'addToFavorite']);
 

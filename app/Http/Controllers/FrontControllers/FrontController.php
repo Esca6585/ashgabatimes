@@ -15,10 +15,10 @@ class FrontController extends Controller
     public function index()
     {
         $categories = Category::where('category_id', null)->get();
-        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(3)->get();
-        $itemHeaders = News::inRandomOrder()->take(4)->get();
-        $contents = News::inRandomOrder()->take(12)->get();
-        $news = News::inRandomOrder()->take(12)->get();
+        $parentCategories = Category::where('category_id', null)->get();
+        $itemHeaders = News::latest()->take(4)->get();
+        $contents = News::latest()->take(24)->get();
+        $news = News::latest()->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.main', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
@@ -29,8 +29,9 @@ class FrontController extends Controller
         return view('front-end.contact-us');
     }
 
-    public function singlePage(News $news)
+    public function singlePage($news_id)
     {
+        $news = News::findOrFail($news_id);
         $news->view++;
         $news->update();
 
@@ -45,9 +46,9 @@ class FrontController extends Controller
         }
 
         $categories = Category::where('category_id', null)->get();
-        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(3)->get();
-        $itemHeaders = News::orderBy('id','desc')->take(4)->get();
-        $contents = News::inRandomOrder()->take(12)->get();
+        $parentCategories = Category::where('category_id', null)->get();
+        $itemHeaders = News::latest()->take(4)->get();
+        $contents = News::latest()->take(24)->get();
         $now = Carbon::now();
 
         return view('front-end.single-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news', 'prevNews', 'nextNews'));
@@ -56,10 +57,10 @@ class FrontController extends Controller
     public function categoryPage($category_id, $category_name)
     {
         $categories = Category::where('category_id', null)->get();
-        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(4)->get();
-        $itemHeaders = News::inRandomOrder()->take(4)->get();
-        $contents = News::inRandomOrder()->take(12)->get();
-        $news = News::where('category_id', $category_id)->get();
+        $parentCategories = Category::where('category_id', null)->get();
+        $itemHeaders = News::latest()->take(4)->get();
+        $contents = News::latest()->take(24)->get();
+        $news = News::latest()->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news', 'category_name'));
@@ -69,10 +70,10 @@ class FrontController extends Controller
     public function favoritePage()
     {
         $categories = Category::where('category_id', null)->get();
-        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(3)->get();
-        $itemHeaders = News::inRandomOrder()->take(4)->get();
-        $contents = News::inRandomOrder()->take(12)->get();
-        $news = News::findMany(Session::get('favorite'));;
+        $parentCategories = Category::where('category_id', null)->get();
+        $itemHeaders = News::latest()->take(4)->get();
+        $contents = News::latest()->take(24)->get();
+        $news = News::latest()->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));

@@ -88,7 +88,7 @@
                                                 class="item-posts first-element-posts col-xs-12  vc-element-post-odd">
                                                 <div class="article-image col-xs-5">
                                                     <a href="{{ route('single-page', $row->id ) }}">
-                                                        <img class="flownews-vc-thumbs" src="{{ $row->image }}" alt="{{ $row->image }}">
+                                                        <img class="flownews-vc-thumbs" src="{{ asset($row->image) }}" alt="{{ asset($row->image) }}">
                                                     </a>
                                                 </div>
                                                 <div class="article-info col-xs-7">
@@ -116,7 +116,7 @@
                                                         </div>
 
                                                         <div class="flownews-clear"></div>
-                                                        <p class="article-excerpt">{{ Str::limit($row->body, 200) }}<a
+                                                        <p class="article-excerpt">{!! Str::limit($row->body, 500) !!}<a
                                                                 class="article-read-more" href="{{ route('single-page', $row->id ) }}">
                                                                 <i class="fa fa-angle-double-right"></i></a>
                                                         </p>
@@ -135,11 +135,16 @@
                                             <div class="flownews-clear"></div>
                                             @endforeach
                                         </div>
-                                        <div class="flownews-clear"></div>
                                     </div>
 
 
-                                    <div class="wpmp-clear"></div>
+                                    <div class="wpmp-clear">
+                                        <div class="d-flex justify-content-center">
+                                            <div>
+                                                {{ $news->links('layouts.pagination') }}
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </div>

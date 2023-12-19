@@ -239,9 +239,6 @@
         @yield('footer')
         <!-- end:wp_footer -->
 
-
-
-
     </div>
     <!-- end:outer wrap -->
 

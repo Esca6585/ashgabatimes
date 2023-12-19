@@ -992,7 +992,7 @@ nav>ul {
 }
 
 .flownews-header-bottom .flownews-menu {
-    height: 44px;
+    height: auto;
     padding: 0;
 }
 
@@ -1829,9 +1829,7 @@ input[type="search"] {
 
 .flownews-wrap-container .article-info-top h2 {
     color: #ffffff;
-    margin-bottom: 15px;
     margin-right: 0;
-    font-size: 40px;
     line-height: 1.2;
 }
 
@@ -1886,7 +1884,7 @@ input[type="search"] {
 }
 
 .flownews-posts-content-wrap .article-info {
-    top: 50%;
+    top: 90%;
     left: 50%;
     bottom: inherit;
     -webkit-transform: translate(-51%, -51%);
@@ -6387,7 +6385,7 @@ a.fnwp-pagination-numeric-arrow:hover {
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 16px;
     display: block;
 }
 
@@ -9022,4 +9020,32 @@ ul.flownews_line li:before {
     line-height: 1;
     text-transform: uppercase;
     padding: 6px 10px
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.page-link {
+    font-size: 1em;
+    border-radius: 50px;
+    border-color: #c9564c;
+}
+
+.mr-2 {
+    margin-right: 15px;
+}
+
+.my-1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.page-link-active {
+    background: #c9564c;
+    color: #fff;
 }

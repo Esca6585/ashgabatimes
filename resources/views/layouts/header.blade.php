@@ -77,9 +77,9 @@
 
             <div class="flownews-wrap-container">
 
-                <div class="flownews-logo flownews-logo-left col-sm-3 bg-black">
+                <div class="flownews-logo flownews-logo-left col-sm-3">
                     <a href="{{ route('main-page') }}">
-                        <img src="{{ asset('assets/logo/ashgabattimes-logo.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo.png') }}"></a>
+                        <img src="{{ asset('assets/logo/ashgabattimes-logo-black.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo-black.png') }}"></a>
                 </div>
 
                 <div class="flownews-banner-top flownews-banner-top-right col-sm-9">
@@ -130,7 +130,7 @@
                                     @endforeach
 
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                        <a href="{{ route('favorite-page') }}">Избранный</a>
+                                        <a href="{{ route('favorite-page') }}">{{ __('Favorite') }}</a>
                                     </li>
                                 </ul>
                             </li>
@@ -142,7 +142,7 @@
                             @endforeach
 
                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                <a href="{{ route('favorite-page') }}">Избранный</a>
+                                <a href="{{ route('favorite-page') }}">{{ __('Favorite') }}</a>
                             </li>
                         </ul>
                     </nav>
@@ -179,7 +179,7 @@
 
             <div class="flownews-logo col-sm-2">
                 <a href="{{ route('main-page') }}">
-                    <img src="{{ asset('assets/logo/ashgabattimes-logo.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo.png') }}">
+                    <img src="{{ asset('assets/logo/ashgabattimes-logo-white.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo-white.png') }}">
                 </a>
 
             </div>
@@ -206,7 +206,7 @@
                         @endforeach
 
                         <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                            <a href="{{ route('favorite-page') }}">Избранный</a>
+                            <a href="{{ route('favorite-page') }}">{{ __('Favorite') }}</a>
                         </li>
 
                     </ul>
@@ -222,8 +222,7 @@
     <div class="flownews-header-wrap-container header-mobile">
         <div class="flownews-logo col-sm-10">
             <a href="{{ route('main-page') }}">
-                <img src="{{ asset('news-template/wp-content/uploads/2017/02/LOGO-white.png') }}"
-                    alt="{{ asset('news-template/wp-content/uploads/2017/02/LOGO-white.png') }}">
+                <img src="{{ asset('assets/logo/ashgabattimes-logo-white.png') }}" alt="Logo {{ asset('assets/logo/ashgabattimes-logo-white.png') }}">
             </a>
         </div>
         <div class="flonews-menu-mobile col-sm-2">
@@ -242,7 +241,7 @@
                         @endforeach
 
                         <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                            <a href="{{ route('favorite-page') }}">Избранный</a>
+                            <a href="{{ route('favorite-page') }}">{{ __('Favorite') }}</a>
                         </li>
                     </ul>
                 </div>
