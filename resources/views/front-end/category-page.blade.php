@@ -1,7 +1,7 @@
 @extends('layouts.news-template')
 
 @section('title')
-    {{ __('News') }}
+    {{ $category_name }}
 @endsection
 
 @section('container-content')

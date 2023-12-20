@@ -18,7 +18,7 @@
     <!-- end:head info -->
 
     <!-- start:wp_head -->
-    <title>@yield('title')</title>
+    <title>{{ config('app.name') }} | @yield('title')</title>
     <script>
         /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
         if (typeof WebFontConfig === "undefined") {

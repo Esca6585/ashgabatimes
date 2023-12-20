@@ -1,7 +1,7 @@
 @extends('layouts.news-template')
 
 @section('title')
-    {{ config('app.name') }} {{ __('News') }}
+    {{ __('Dashboard') }}
 @endsection
 
 @section('item-header')
