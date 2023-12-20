@@ -35,15 +35,8 @@ class FrontController extends Controller
         $news->view++;
         $news->update();
 
-        $prevNews = $nextNews = null;
-
-        if($news->id-1 > 0){
-            $prevNews = News::findOrFail($news->id-1);
-        }
-
-        if($news->id+1 <= News::latest('id')->first()->id){
-            $nextNews = News::findOrFail($news->id+1);
-        }
+        $prevNews = News::where('category_id', $news->category->id)->inRandomOrder()->first();
+        $nextNews = News::where('category_id', $news->category->id)->inRandomOrder()->first();
 
         $categories = Category::where('category_id', null)->get();
         $parentCategories = Category::where('category_id', null)->get();
@@ -57,10 +50,10 @@ class FrontController extends Controller
     public function categoryPage($category_id, $category_name)
     {
         $categories = Category::where('category_id', null)->get();
-        $parentCategories = Category::where('category_id', null)->get();
-        $itemHeaders = News::latest()->take(4)->get();
-        $contents = News::latest()->take(24)->get();
-        $news = News::latest()->paginate(24);
+        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(4)->get();
+        $itemHeaders = News::inRandomOrder()->take(4)->get();
+        $contents = News::inRandomOrder()->take(24)->get();
+        $news = News::where('category_id', $category_id)->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news', 'category_name'));
@@ -73,7 +66,7 @@ class FrontController extends Controller
         $parentCategories = Category::where('category_id', null)->get();
         $itemHeaders = News::latest()->take(4)->get();
         $contents = News::latest()->take(24)->get();
-        $news = News::latest()->paginate(24);
+        $news = News::findMany(Session::get('favorite'))->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));

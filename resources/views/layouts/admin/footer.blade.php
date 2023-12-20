@@ -5,7 +5,7 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted font-weight-bold mr-2">{{ date('Y') }} &copy</span>
-            <a href="{{ route('main-page') }}" class="text-dark-75 text-hover-primary">Admin Panel</a>
+            <a href="{{ route('main-page') }}" class="text-dark-75 text-hover-primary">Ashgabat Times</a>
         </div>
         <!--end::Copyright-->
         <!--begin::Nav-->

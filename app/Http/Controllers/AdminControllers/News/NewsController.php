@@ -66,8 +66,6 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
-        // dump($request);
-
         if($request->file('image')){
             $image = $request->file('image');
 

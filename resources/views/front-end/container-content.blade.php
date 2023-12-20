@@ -87,14 +87,14 @@
                                             <article
                                                 class="item-posts first-element-posts col-xs-12  vc-element-post-odd">
                                                 <div class="article-image col-xs-5">
-                                                    <a href="{{ route('single-page', $row->id ) }}">
+                                                    <a href="{{ route('single-page', [$row->id, Str::slug($row->title)] ) }}">
                                                         <img class="flownews-vc-thumbs" src="{{ asset($row->image) }}" alt="{{ asset($row->image) }}">
                                                     </a>
                                                 </div>
                                                 <div class="article-info col-xs-7">
                                                     <div class="article-info-top">
                                                         <h3 class="article-title"><a
-                                                                href="{{ route('single-page', $row->id ) }}">{{ $row->title }}</a>
+                                                                href="{{ route('single-page', [$row->id, Str::slug($row->title)] ) }}">{{ $row->title }}</a>
                                                         </h3>
                                                         <div class="article-data">
                                                             <i class="fa fa-calendar-o"></i>{{ $now->diffForHumans($row->updated_at) }}
@@ -117,7 +117,7 @@
 
                                                         <div class="flownews-clear"></div>
                                                         <p class="article-excerpt">{!! Str::limit($row->body, 500) !!}<a
-                                                                class="article-read-more" href="{{ route('single-page', $row->id ) }}">
+                                                                class="article-read-more" href="{{ route('single-page', [$row->id, Str::slug($row->title)] ) }}">
                                                                 <i class="fa fa-angle-double-right"></i></a>
                                                         </p>
                                                         <div class="flownews-clear"></div>

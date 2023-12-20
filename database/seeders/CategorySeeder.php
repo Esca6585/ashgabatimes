@@ -18,47 +18,47 @@ class CategorySeeder extends Seeder
         $parentCategories = [
                 // id=1
             [
-                'name' => 'Тест-драйвы',
+                'name' => 'Täzelikler',
                 'category_id' => null,
             ],
                 // id=2
             [
-                'name' => 'ГИБДД',
+                'name' => 'Habarlar',
                 'category_id' => null,
             ],
                 // id=3
             [
-                'name' => 'Новости',
+                'name' => 'Syýasat',                
                 'category_id' => null,
             ],
                 // id=4
             [
-                'name' => 'Кроссоверы',
+                'name' => 'Ylym-bilim',
                 'category_id' => null,
             ],
                 // id=5
             [
-                'name' => 'LADA',
+                'name' => 'Tehnologiýa',
                 'category_id' => null,
             ],
                 // id=6
             [
-                'name' => 'Штрафы',
+                'name' => 'Saglyk',
                 'category_id' => null,
             ],
                 // id=7
             [
-                'name' => 'Техосмотр',
+                'name' => 'Sport',
                 'category_id' => null,
             ],
                 // id=8
             [
-                'name' => 'АвтоМобиль',
+                'name' => 'Dünýä habarlary',
                 'category_id' => null,
             ],
                 // id=9
             [
-                'name' => 'Другие',
+                'name' => 'Ykdysadyýet',
                 'category_id' => null,
             ],
         ];

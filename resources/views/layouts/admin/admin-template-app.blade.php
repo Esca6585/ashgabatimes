@@ -38,7 +38,7 @@
     <link href="{{ asset('metronic-template/v7/assets/css/themes/layout/aside/dark.css') }}" rel="stylesheet"
         type="text/css" />
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/agtimes-logo.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/logo/ashgabattimes-logo-white.png') }}">
 
     <link rel="stylesheet" href="{{ asset('metronic-template/v7/assets/css/alert.css') }}">
 

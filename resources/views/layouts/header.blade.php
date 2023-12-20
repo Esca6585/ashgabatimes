@@ -37,10 +37,10 @@
                         @foreach($contents as $key => $content)
                         <div class="news-ticker-item">
                             <div class="news-ticker-item-category">
-                                <a href="{{ route('category-page', [ $content->category->id, $content->category->name ] ) }}" title="{{ $content->category->name }}">{{ $content->category->name }}</a>
+                                <a href="{{ route('category-page', [ $content->category->id, Str::slug($content->category->name) ] ) }}" title="{{ $content->category->name }}">{{ $content->category->name }}</a>
                             </div>
                             <div class="news-ticker-item-title">
-                                <a href="{{ route('single-page', $content->id ) }}">{{ $content->title }}</a>
+                                <a href="{{ route('single-page', [ $content->id, Str::slug($content->title) ] ) }}">{{ $content->title }}</a>
                             </div>
                         </div>
                         @endforeach
@@ -235,8 +235,7 @@
                     <ul id="menu-main-menu-2" class="flownews-menu">
                         @foreach($categories as $key => $category)
                         <li class="mega-menu-carousel menu-item menu-item-type-taxonomy menu-item-object-category">
-                            <a
-                                href="{{ route('category-page', [ $category->id, $category->name ]) }}">{{ $category->name }}</a>
+                            <a href="{{ route('category-page', [ $category->id, Str::slug($category->name) ]) }}">{{ $category->name }}</a>
                         </li>
                         @endforeach
 
@@ -278,11 +277,11 @@
             <div class="flownews-top-news-ticker">
                 @foreach($contents as $key => $content)
                 <div class="news-ticker-item">
-                    <div class="news-ticker-item-category"><a
-                            href="{{ route('category-page', [ $content->category->id, $content->category->name ]) }}"
+                    <div class="news-ticker-item-category">
+                        <a href="{{ route('category-page', [ $content->category->id, Str::slug($content->category->name) ]) }}"
                             title="{{ $content->category->name }}">{{ $content->category->name }}</a></div>
-                    <div class="news-ticker-item-title"><a
-                            href="{{ route('single-page', $content->id ) }}">{{ $content->title }}</a></div>
+                    <div class="news-ticker-item-title">
+                        <a href="{{ route('single-page', [ $content->id, Str::slug($content->title) ]) }}">{{ $content->title }}</a></div>
                 </div>
                 @endforeach
             </div>

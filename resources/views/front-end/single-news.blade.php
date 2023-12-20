@@ -30,7 +30,7 @@
                     <div class="article-separator">|</div>
 
                     <div class="article-features-category"><i class="fa fa-ticket"></i><a
-                            href="{{ route('category-page', [ $news->category_id, $news->category->name ] ) }}"
+                            href="{{ route('category-page', [ $news->category_id, Str::slug($news->category->name) ] ) }}"
                             title="{{ $news->category->name }}">{{ $news->category->name }}</a></div>
                     <div class="flownews-clear"></div>
 
@@ -106,7 +106,7 @@
                             class="attachment-60x60 size-60x60 wp-post-image" alt="{{ asset($prevNews->image) }}"
                             srcset="{{ asset($prevNews->image) }}"
                             sizes="(max-width: 60px) 100vw, 60px" />
-                        <a href="{{ route('single-page', $prevNews->id ) }}" class="prev">
+                        <a href="{{ route('single-page', [ $prevNews->id, Str::slug($prevNews->title) ] ) }}" class="prev">
                             <span class="prev-post-text"><i class="fa  fa-angle-left"></i> Предыдущий {{ __('News') }}</span>
                             <span class="name-post">{{ $prevNews->title }}</span>
                         </a>
@@ -115,10 +115,9 @@
                 @endif
 
 
-
                 @if($nextNews)
                     <div class="next-post">
-                        <a href="{{ route('single-page', $nextNews->id ) }}" class="next">
+                        <a href="{{ route('single-page', [ $nextNews->id, Str::slug($nextNews->title) ] ) }}" class="next">
                             <span class="next-post-text">Следующий {{ __('News') }}<i class="fa  fa-angle-right"></i></span>
                             <span class="name-post">{{ $nextNews->title }}</span>
                         </a>
@@ -152,14 +151,14 @@
                     <div class="box_post">
                         <div class="container_post ad_one_one">
                             <div class="img-post fnwp-mega-post-item-0 ad_one_third">
-                                <a href="{{ route('single-page', $itemHeader->id ) }}">
+                                <a href="{{ route('single-page', [ $itemHeader->id, Str::slug($itemHeader->title) ] ) }}">
                                     <img src="{{ asset($itemHeader->image) }}"
                                         alt="{{ asset($itemHeader->image) }}"></a>
                             </div>
                             <div class="box-info ad_two_third">
                                 <h4 class="title-post">
-                                    <a href="{{ route('single-page', $itemHeader->id ) }}"
-                                        title="{{ $itemHeader->title }}">{{ $itemHeader->title }}</a>
+                                    <a href="{{ route('single-page', [ $itemHeader->id, Str::slug($itemHeader->title) ] ) }}"
+                                        title="{{ $itemHeader->title }}">{{ Str::limit($itemHeader->title, 75) }}</a>
                                 </h4>
                                 <span class="data"><i
                                         class="fa fa-calendar-o"></i>{{ $now->diffForHumans($itemHeader->updated_at) }}</span>
@@ -202,15 +201,15 @@
                     @foreach($contents as $content)
                     <div class="ad_one_one">
                         <div class="slider-posts-item fnwp-slider-posts-item-0 ad_one_one ad_last big-post sixth item">
-                            <a href=""><img src="{{ asset($content->image) }}" alt="{{ asset($content->image) }}"></a>
+                            <a href="{{ route('single-page', [ $content->id, Str::slug($content->title) ] ) }}"><img src="{{ asset($content->image) }}" alt="{{ asset($content->image) }}"></a>
                             <div class="box-text">
                                 <div class="box-padding">
                                     <h3 class="title-post">
-                                        <a href="{{ route('single-page', $content->id ) }}"
-                                            title="{{ $content->title }}">{{ $content->title }}</a>
+                                        <a href="{{ route('single-page', [ $content->id, Str::slug($content->title) ] ) }}"
+                                            title="{{ $content->title }}">{{ Str::limit($content->title, 75) }}</a>
                                     </h3>
                                     <div class="category"><a
-                                            href="{{ route('category-page', [ $content->category_id, $content->category->name ]) }}"
+                                            href="{{ route('category-page', [ $content->category_id, Str::slug($content->category->name) ]) }}"
                                             title="View all posts in Food">{{ $content->category->name }}</a></div>
                                     <span class="data"><i
                                             class="fa fa-calendar-o"></i>{{ $now->diffForHumans($content->updated_at) }}</span>

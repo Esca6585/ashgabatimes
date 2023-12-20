@@ -19,6 +19,8 @@
                         <div class="flownews-widget-contact-address" style="color:white">
                             <i class="fa fa-map-marker"></i> Turkmenistan Aşgabat</div>
                         <div class="flownews-widget-contact-mail" style="color:white">
+                            <i class="fa fa-envelope-o"></i> ashgabattimes@sanly.tm</div>
+                        <div class="flownews-widget-contact-mail" style="color:white">
                             <i class="fa fa-envelope-o"></i> timesashgabat@gmail.com</div>
                         <div class="flownews-widget-contact-mail" style="color:white">
                             <i class="fa fa-envelope-o"></i> esca656585@gmail.com</div>
@@ -39,13 +41,13 @@
                             <div class="box_post">
                                 <div class="container_post ad_one_one">
                                     <div class="img-post fnwp-mega-post-item-0 ad_one_third">
-                                        <a href="{{ route('single-page', $itemHeader->id ) }}"><img
+                                        <a href="{{ route('single-page', [$itemHeader->id, Str::slug($itemHeader->title)] ) }}"><img
                                                 src="{{ asset($itemHeader->image) }}"
                                                 alt="{{ asset($itemHeader->image) }}" width="150px"></a>
                                     </div>
                                     <div class="box-info ad_two_third">
                                         <h4 class="title-post">
-                                            <a href="{{ route('single-page', $itemHeader->id ) }}"
+                                            <a href="{{ route('single-page', [$itemHeader->id, Str::slug($itemHeader->title)] ) }}"
                                                 title="{{ $itemHeader->title }}">{{ $itemHeader->title }}</a>
                                         </h4>
                                         <span class="data"><i
@@ -68,13 +70,13 @@
                             <div class="box_post">
                                 <div class="container_post ad_one_one">
                                     <div class="img-post fnwp-mega-post-item-0 ad_one_third">
-                                        <a href="{{ route('single-page', $content->id ) }}"><img
+                                        <a href="{{ route('single-page', [$content->id, Str::slug($content->title)] ) }}"><img
                                                 src="{{ asset($content->image) }}" alt="{{ asset($content->image) }}"
                                                 width="150px"></a>
                                     </div>
                                     <div class="box-info ad_two_third">
                                         <h4 class="title-post">
-                                            <a href="{{ route('single-page', $content->id ) }}"
+                                            <a href="{{ route('single-page', [$content->id, Str::slug($content->title)] ) }}"
                                                 title="{{ $content->title }}">{{ $content->title }}</a>
                                         </h4>
                                         <span class="data"><i

@@ -6,7 +6,7 @@
 
     @foreach($contents as $key => $content)
     <article class="item-posts first-element-posts">
-        <div class="article-image"><a href="{{ route('single-page', $content->id) }}">
+        <div class="article-image"><a href="{{ route('single-page', [$content->id, Str::slug($content->title)] ) }}">
             <img class="flownews-vc-thumbs"
                     src="{{ asset($content->image) }}" alt="{{ asset($content->image) }}"></a>
             <div class="article-category"><a href="{{ route('category-page', [ $content->category->id, $content->category->name ]) }}"
@@ -38,7 +38,7 @@
                 <div class="flownews-clear"></div>
             </div>
             <div class="article-info-bottom">
-                <h3 class="article-title"><a href="{{ route('single-page', $content->id) }}">{{ $content->title }}</a>
+                <h3 class="article-title"><a href="{{ route('single-page', [$content->id, Str::slug($content->title)] ) }}">{{ $content->title }}</a>
                 </h3>
                 <div class="flownews-clear"></div>
             </div>
