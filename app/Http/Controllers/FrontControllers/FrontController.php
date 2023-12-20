@@ -66,7 +66,7 @@ class FrontController extends Controller
         $parentCategories = Category::where('category_id', null)->get();
         $itemHeaders = News::latest()->take(4)->get();
         $contents = News::latest()->take(24)->get();
-        $news = News::findMany(Session::get('favorite'))->paginate(24);
+        $news = News::findMany(Session::get('favorite'));
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
