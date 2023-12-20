@@ -144,7 +144,7 @@
 
         <div class="flownews-sidebar col-xs-3" data-sticky_column>
             <div id="mega-posts-2" class="widget fnwp-widget flownews_widget fnwp_mega_posts">
-                <h3 class="widget-title"><span class="fnwp-title-widget">Последние {{ __('News') }}</span></h3>
+                <h3 class="widget-title"><span class="fnwp-title-widget">{{ __('News') }}</span></h3>
                 <div class="mega-posts fnwp-mega-post-widget-1">
 
                     @foreach($itemHeaders as $itemHeader)
@@ -224,7 +224,7 @@
             </div>
 
             <div id="widget-fnwp_social-3" class="widget widget_fnwp_social fnwp-widget flownews_widget fnwp_social">
-                <h3 class="widget-title"><span class="fnwp-title-widget">Социальные сети</span></h3>
+                <h3 class="widget-title"><span class="fnwp-title-widget">{{ __('Social media') }}</span></h3>
                 <div class="box_social ad_one_one flownews-widget-social-style2">
                     <div class="box-icon-social col-xs-2 facebook"><a href="#facebook" class="fa fa-facebook"></a>
                     </div>

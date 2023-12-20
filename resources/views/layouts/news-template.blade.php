@@ -13,7 +13,7 @@
     <!-- end:responsive web design -->
 
     <!-- start:head info -->
-    <link rel="shortcut icon" href="{{ asset('news-template/wp-content/uploads/2017/02/flow-news-favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/logo/ashgabattimes-logo-white-icon.png') }}">
 
     <!-- end:head info -->
 
