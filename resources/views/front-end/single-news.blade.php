@@ -8,7 +8,7 @@
                 </div>
                 <div class="article-info-bottom">
                     <div class="article-data"><i
-                            class="fa fa-calendar-o"></i>{{ $news->updated_at->toFormattedDateString() }}</div>
+                            class="fa fa-calendar-o"></i>{{ $news->created_at->toFormattedDateString() }}</div>
                     <div class="article-separator">|</div>
                     <div class="article-comments"><i class="fa fa-eye"></i>{{ $news->view }}</div>
                     <div class="article-separator">|</div>
@@ -161,7 +161,7 @@
                                         title="{{ $itemHeader->title }}">{{ Str::limit($itemHeader->title, 75) }}</a>
                                 </h4>
                                 <span class="data"><i
-                                        class="fa fa-calendar-o"></i>{{ $now->diffForHumans($itemHeader->updated_at) }}</span>
+                                        class="fa fa-calendar-o"></i>{{ $now->diffForHumans($itemHeader->created_at) }}</span>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                                             href="{{ route('category-page', [ $content->category_id, Str::slug($content->category->name) ]) }}"
                                             title="View all posts in Food">{{ $content->category->name }}</a></div>
                                     <span class="data"><i
-                                            class="fa fa-calendar-o"></i>{{ $now->diffForHumans($content->updated_at) }}</span>
+                                            class="fa fa-calendar-o"></i>{{ $now->diffForHumans($content->created_at) }}</span>
                                 </div>
                             </div>
                             <div class="slider-pattern"></div>
