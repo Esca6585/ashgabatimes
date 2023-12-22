@@ -53,7 +53,7 @@ class FrontController extends Controller
         $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(4)->get();
         $itemHeaders = News::inRandomOrder()->orderByDesc('id')->take(4)->get();
         $contents = News::inRandomOrder()->orderByDesc('id')->take(24)->get();
-        $news = News::where('category_id', $category_id)->paginate(24);
+        $news = News::where('category_id', $category_id)->orderByDesc('id')->paginate(24);
         $now = Carbon::now();
 
         return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news', 'category_name'));
