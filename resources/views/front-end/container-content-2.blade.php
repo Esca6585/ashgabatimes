@@ -134,7 +134,13 @@
                                     </div>
 
 
-                                    <div class="wpmp-clear"></div>
+                                    <div class="wpmp-clear">
+                                        <div class="d-flex justify-content-center">
+                                            <div>
+                                                {{ $news->links('layouts.pagination') }}
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </div>
