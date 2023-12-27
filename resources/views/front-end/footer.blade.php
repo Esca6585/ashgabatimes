@@ -22,8 +22,6 @@
                             <i class="fa fa-envelope-o"></i> ashgabattimes@sanly.tm</div>
                         <div class="flownews-widget-contact-mail" style="color:white">
                             <i class="fa fa-envelope-o"></i> timesashgabat@gmail.com</div>
-                        <div class="flownews-widget-contact-mail" style="color:white">
-                            <i class="fa fa-envelope-o"></i> esca656585@gmail.com</div>
                         <div class="flownews-widget-contact-tel-number" style="color:white">
                             <i class="fa fa-phone"></i> +993 62 274754</div>
                         <div class="flownews-widget-contact-cell-number" style="color:white">
