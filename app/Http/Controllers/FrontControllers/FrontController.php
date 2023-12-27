@@ -69,7 +69,9 @@ class FrontController extends Controller
         $news = News::findMany(Session::get('favorite'));
         $now = Carbon::now();
 
-        return view('front-end.category-page', compact('categories', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
+        $category_name = __('Favorite');
+
+        return view('front-end.category-page', compact('categories', 'category_name', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
     }
 
     public function addToFavorite($id)

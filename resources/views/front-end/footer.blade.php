@@ -10,8 +10,8 @@
                     <div id="widget-contact-2"
                         class="widget widget_contact fnwp-widget flownews_widget flownews_widget_contact">
                         <div class="flownews-widget-contact-image">
-                            <img src="http://themes.ad-theme.com/wp/flownews/wp-content/uploads/2017/02/LOGO-white-300x90.png"
-                                title="contact Image" alt=""></div>
+                            <img src="{{ asset('assets/logo/ashgabattimes-logo-white.png') }}" title="contact Image" alt="{{ asset('assets/logo/ashgabattimes-logo-white.png') }}">
+                        </div>
 
                         <div class="flownews-widget-contact-address-title">
                             <h4>{{ __('Address') }}</h4>
@@ -41,8 +41,8 @@
                             <div class="box_post">
                                 <div class="container_post ad_one_one">
                                     <div class="img-post fnwp-mega-post-item-0 ad_one_third">
-                                        <a href="{{ route('single-page', [$itemHeader->id, Str::slug($itemHeader->title)] ) }}"><img
-                                                src="{{ asset($itemHeader->image) }}"
+                                        <a href="{{ route('single-page', [$itemHeader->id, Str::slug($itemHeader->title)] ) }}">
+                                            <img src="{{ asset($itemHeader->image) }}"
                                                 alt="{{ asset($itemHeader->image) }}" width="150px"></a>
                                     </div>
                                     <div class="box-info ad_two_third">
