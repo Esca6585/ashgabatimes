@@ -50,7 +50,7 @@ class FrontController extends Controller
     public function categoryPage($category_id, $category_name)
     {
         $categories = Category::where('category_id', null)->orderByDesc('id')->get();
-        $parentCategories = Category::where('category_id', null)->inRandomOrder()->take(4)->get();
+        $parentCategories = Category::where('category_id', null)->orderByDesc('id')->get();
         $itemHeaders = News::inRandomOrder()->orderByDesc('id')->take(4)->get();
         $contents = News::inRandomOrder()->orderByDesc('id')->take(24)->get();
         $news = News::where('category_id', $category_id)->orderByDesc('id')->paginate(24);
