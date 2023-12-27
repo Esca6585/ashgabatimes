@@ -211,8 +211,9 @@
 
 </head>
 
-<body
-    class="home page-template-default page page-id-545 flownews-fullwidth wpb-js-composer js-comp-ver-5.0.1 vc_responsive">
+<body class="home page-template-default page page-id-545 flownews-fullwidth wpb-js-composer js-comp-ver-5.0.1 vc_responsive">
+
+    @include('front-end.snowing')
 
     <!-- start:outer wrap -->
     <div id="flownews-outer-wrap">

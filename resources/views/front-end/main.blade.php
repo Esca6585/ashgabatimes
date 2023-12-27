@@ -15,4 +15,3 @@
 @section('footer')
     @include('front-end.footer')
 @endsection
-
