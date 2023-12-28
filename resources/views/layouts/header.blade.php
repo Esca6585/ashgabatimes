@@ -102,7 +102,6 @@
             <div class="flownews-header-bottom flownews-wrap-container">
 
 
-
                 <div class="flownews-menu col-sm-11">
 
                     <!-- start:menu desktop -->
@@ -286,5 +285,20 @@
                 @endforeach
             </div>
         </div>
+
     </div>
 </header>
+
+<div class="flownews-header-middle element-no-padding mobile-banner" >
+    <div class="flownews-wrap-container d-flex justify-content-center">
+        <div class="flownews-banner-top flownews-banner-top-right col-sm-9">
+            <div class="flownews_advertisement_top_banner">
+                <a href="https://www.yupekyoly.com" target="_blank">
+                    <img src="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}"
+                        alt="{{ asset('assets/logo/yupek-yoly-banner.jpg') }}">
+                </a>
+            </div>
+        </div>
+        <div class="flownews-clear"></div>
+    </div>
+</div>

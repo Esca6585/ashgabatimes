@@ -36,6 +36,14 @@ Author:	Ad-Theme
     background: #FFF;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
 .flownews-header-top,
 .flownews-header-top .flownews-wrap-container {
     background: #000;
@@ -790,6 +798,10 @@ tr th:first-child {
 
 .flownews-boxed .flownews-header-top .flownews-wrap-container {
     padding: 0 50px;
+}
+
+.mobile-banner {
+    display: none;
 }
 
 @media screen and (min-width: 1201px) {
@@ -2392,6 +2404,9 @@ input[type="search"] {
         display: none;
     }
     .header-mobile {
+        display: block;
+    }
+    .mobile-banner {
         display: block;
     }
     .flownews-header-sticky {
