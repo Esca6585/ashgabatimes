@@ -1886,7 +1886,6 @@ input[type="search"] {
     height: auto;
     overflow: hidden;
     position: relative;
-    background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 0;
 }
