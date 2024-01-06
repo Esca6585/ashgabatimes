@@ -1724,7 +1724,7 @@ input[type="search"] {
 }
 
 .flownews-posts-content-wrap .header-pattern {
-    background: #282828;
+    background: rgb(40, 40, 40, .9);
     position: absolute;
     top: 0;
     left: 0;
