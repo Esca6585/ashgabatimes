@@ -21,7 +21,7 @@
                 <h2 class="article-title">
                     <a href="{{ route('single-page', [$itemHeader->id, Str::slug($itemHeader->title)] ) }}">{{ $itemHeader->title }}</a>
                 </h2>
-                <div class="article-category"><a href="{{ route('category-page', [ $itemHeader->category_id, $itemHeader->category->name ]) }}"
+                <div class="article-category"><a href="{{ route('category-page', [ $itemHeader->category_id, Str::slug($itemHeader->category->name) ]) }}"
                             title="{{ $itemHeader->category->name }}">{{ $itemHeader->category->name }}</a></div>
                 <div class="flownews-clear"></div>
             </div>

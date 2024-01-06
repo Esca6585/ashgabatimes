@@ -114,12 +114,12 @@
                                 <ul class="submenu">
                                     @foreach($categories as $category)
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                        <a href="{{ route('category-page', [ $category->id, $category->name ] ) }}">{{ $category->name }}</a>
+                                        <a href="{{ route('category-page', [ $category->id, Str::slug($category->name) ] ) }}">{{ $category->name }}</a>
                                         @forelse($category->categories as $subcategory)
                                         <ul class="submenu">
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                                 <a
-                                                    href="{{ route('category-page', [ $subcategory->id, $subcategory->name ] ) }}">{{ $subcategory->name }}</a>
+                                                    href="{{ route('category-page', [ $subcategory->id, Str::slug($subcategory->name) ] ) }}">{{ $subcategory->name }}</a>
                                             </li>
                                         </ul>
                                         @empty
@@ -136,7 +136,7 @@
 
                             @foreach($parentCategories as $key => $parentCategory)
                             <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                <a href="{{ route('category-page', [ $parentCategory->id, $parentCategory->name ] ) }}">{{ $parentCategory->name }}</a>
+                                <a href="{{ route('category-page', [ $parentCategory->id, Str::slug($parentCategory->name) ] ) }}">{{ $parentCategory->name }}</a>
                             </li>
                             @endforeach
 
@@ -190,12 +190,12 @@
                         @foreach($categories as $category)
                         <li class="menu-item menu-item-type-custom menu-item-object-custom">
                             <a
-                                href="{{ route('category-page', [ $category->id, $category->name ]) }}">{{ $category->name }}</a>
+                                href="{{ route('category-page', [ $category->id, Str::slug($category->name) ]) }}">{{ $category->name }}</a>
                             @forelse($category->categories as $subcategory)
                             <ul class="submenu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                     <a
-                                        href="{{ route('category-page', [ $subcategory->id, $subcategory->name ]) }}">{{ $subcategory->name }}</a>
+                                        href="{{ route('category-page', [ $subcategory->id, Str::slug($subcategory->name) ]) }}">{{ $subcategory->name }}</a>
                                 </li>
                             </ul>
                             @empty
