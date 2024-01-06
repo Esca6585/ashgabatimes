@@ -1883,7 +1883,7 @@ input[type="search"] {
 }
 
 .flownews-posts-content-wrap {
-    height: 600px;
+    height: auto;
     overflow: hidden;
     position: relative;
     background-size: cover;

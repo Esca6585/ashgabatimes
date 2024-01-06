@@ -71,7 +71,7 @@ class FrontController extends Controller
 
         $category_name = __('Favorite');
 
-        return view('front-end.category-page', compact('categories', 'category_name', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
+        return view('front-end.category-page-favorite', compact('categories', 'category_name', 'parentCategories', 'now', 'itemHeaders', 'contents', 'news'));
     }
 
     public function addToFavorite($id)

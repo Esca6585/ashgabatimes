@@ -93,8 +93,8 @@
                                                 </div>
                                                 <div class="article-info col-xs-7">
                                                     <div class="article-info-top">
-                                                        <h3 class="article-title"><a
-                                                                href="{{ route('single-page', [$row->id, Str::slug($row->title)] ) }}">{{ $row->title }}</a>
+                                                        <h3 class="article-title">
+                                                            <a href="{{ route('single-page', [$row->id, Str::slug($row->title)] ) }}">{{ $row->title }}</a>
                                                         </h3>
                                                         <div class="article-data">
                                                             <i class="fa fa-calendar-o"></i>{{ $now->diffForHumans($row->updated_at) }}
@@ -123,8 +123,8 @@
                                                         <div class="flownews-clear"></div>
                                                     </div>
                                                     <div class="article-info-bottom">
-                                                        <div class="article-category"><a href="{{ route('category-page', [ $row->category->id, Str::slug($row->category->name) ] ) }}"
-                                                                title="{{ $row->category->name }}">{{ $row->category->name }}</a>
+                                                        <div class="article-category">
+                                                            <a href="{{ route('category-page', [ $row->category->id, Str::slug($row->category->name) ] ) }}" title="{{ $row->category->name }}">{{ $row->category->name }}</a>
                                                             <a href="{{ route('category-page', [ $row->category->id, Str::slug($row->category->name) ] ) }}"><i class="fa fa-mail-forward"></i></a>
                                                         </div>
 

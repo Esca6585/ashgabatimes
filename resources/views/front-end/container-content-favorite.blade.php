@@ -133,16 +133,6 @@
                                         <div class="flownews-clear"></div>
                                     </div>
 
-
-                                    <div class="wpmp-clear">
-                                        <div class="d-flex justify-content-center">
-                                            <div>
-                                                {{ $news->links('layouts.pagination') }}
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                 </div>
                             </div>
                         </div>
