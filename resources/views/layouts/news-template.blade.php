@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="google-site-verification" content="NWiCV1izEHVfNSg3Y0vjsnMoMrjuK3V-pSelb6PXIaA" />
+    
     <!-- end:global -->
 
     <!-- start:responsive web design -->
