@@ -160,8 +160,7 @@
                                     <a href="{{ route('single-page', [ $itemHeader->id, Str::slug($itemHeader->title) ] ) }}"
                                         title="{{ $itemHeader->title }}">{{ Str::limit($itemHeader->title, 75) }}</a>
                                 </h4>
-                                <span class="data"><i
-                                        class="fa fa-calendar-o"></i>{{ $now->diffForHumans($itemHeader->created_at) }}</span>
+                                <span class="data"><i class="fa fa-calendar-o"></i>{{ $now->diffForHumans($itemHeader->created_at) }}</span>
                             </div>
                         </div>
                     </div>

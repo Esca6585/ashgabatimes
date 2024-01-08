@@ -189,13 +189,11 @@
                     <ul id="menu-main-menu-1" class="flownews-menu">
                         @foreach($categories as $category)
                         <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                            <a
-                                href="{{ route('category-page', [ $category->id, Str::slug($category->name) ]) }}">{{ $category->name }}</a>
+                            <a href="{{ route('category-page', [ $category->id, Str::slug($category->name) ]) }}">{{ $category->name }}</a>
                             @forelse($category->categories as $subcategory)
                             <ul class="submenu">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a
-                                        href="{{ route('category-page', [ $subcategory->id, Str::slug($subcategory->name) ]) }}">{{ $subcategory->name }}</a>
+                                    <a href="{{ route('category-page', [ $subcategory->id, Str::slug($subcategory->name) ]) }}">{{ $subcategory->name }}</a>
                                 </li>
                             </ul>
                             @empty

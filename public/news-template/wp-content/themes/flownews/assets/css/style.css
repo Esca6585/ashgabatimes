@@ -1665,6 +1665,10 @@ input[type="search"] {
     border: inherit;
 }
 
+.flownews-post-layout1 {
+    background-size: contain;
+}
+
 @media screen and (min-width: 500px) and (max-width: 700px) {
     .flownews-posts-image-wrap .flownews-wrap-container .article-info-top h2,
     .flownews-posts-content-wrap.flownews-post-layout1 .article-info-top h2 {
